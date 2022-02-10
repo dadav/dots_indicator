@@ -40,10 +40,20 @@ class DotsDecorator {
   /// @Default `CircleBorder()`
   final ShapeBorder shape;
 
+  /// Inactive dot shape
+  ///
+  /// @Default `null`
+  final List<ShapeBorder>? indexShapes;
+
   /// Active dot shape
   ///
   /// @Default `CircleBorder()`
   final ShapeBorder activeShape;
+
+  /// Active dot shape
+  ///
+  /// @Default `CircleBorder()`
+  final List<ShapeBorder>? indexActiveShapes;
 
   /// Spacing between dots
   ///
@@ -58,7 +68,9 @@ class DotsDecorator {
     this.size = kDefaultSize,
     this.activeSize = kDefaultSize,
     this.shape = kDefaultShape,
+    this.indexShapes = null,
     this.activeShape = kDefaultShape,
+    this.indexActiveShapes = null,
     this.spacing = kDefaultSpacing,
   });
 }

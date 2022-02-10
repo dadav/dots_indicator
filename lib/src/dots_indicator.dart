@@ -50,8 +50,8 @@ class DotsIndicator extends StatelessWidget {
       state,
     );
     final shape = ShapeBorder.lerp(
-      decorator.activeShape,
-      decorator.shape,
+      decorator.indexActiveShapes != null ? decorator.indexActiveShapes![index] : decorator.activeShape,
+      decorator.indexShapes != null ? decorator.indexShapes![index] : decorator.shape,
       state,
     )!;
 
