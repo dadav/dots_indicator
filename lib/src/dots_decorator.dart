@@ -10,10 +10,20 @@ class DotsDecorator {
   /// @Default `Colors.grey`
   final Color color;
 
+  /// Inactive dot color per index
+  ///
+  /// @Default `null`
+  final List<Color>? indexColors;
+
   /// Active dot color
   ///
   /// @Default `Colors.lightBlue`
   final Color activeColor;
+
+  /// Active dot color per index
+  ///
+  /// @Default `null`
+  final List<Color>? indexActiveColors;
 
   /// Inactive dot size
   ///
@@ -42,7 +52,9 @@ class DotsDecorator {
 
   const DotsDecorator({
     this.color = Colors.grey,
+    this.indexColors = null,
     this.activeColor = Colors.lightBlue,
+    this.indexActiveColors = null,
     this.size = kDefaultSize,
     this.activeSize = kDefaultSize,
     this.shape = kDefaultShape,

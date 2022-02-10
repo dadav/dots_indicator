@@ -40,7 +40,15 @@ class DotsIndicator extends StatelessWidget {
     final state = min(1.0, (position - index).abs());
 
     final size = Size.lerp(decorator.activeSize, decorator.size, state)!;
-    final color = Color.lerp(decorator.activeColor, decorator.color, state);
+    final color = Color.lerp(
+      decorator.indexActiveColors != null
+          ? decorator.indexAxtiveColors[index]
+          : decorator.activeColor,
+      decorator.indexColors != null
+          ? decorator.indexColors[index]
+          : decorator.color,
+      state,
+    );
     final shape = ShapeBorder.lerp(
       decorator.activeShape,
       decorator.shape,
